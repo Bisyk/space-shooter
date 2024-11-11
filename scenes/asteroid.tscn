@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://bm8tlqi3y1nik"]
+
+[ext_resource type="Script" path="res://scenes/asteroid.gd" id="1_psxlo"]
+[ext_resource type="Texture2D" uid="uid://bcfg6cbfurhen" path="res://Assets/Enviroment/Asteroids/PNGs/Asteroid_1.png" id="2_2ry83"]
+[ext_resource type="Texture2D" uid="uid://csshhhpn6ptm7" path="res://Assets/Enviroment/Asteroids/PNGs/Asteroid_2.png" id="3_tc04s"]
+[ext_resource type="Texture2D" uid="uid://byvybalaw7aun" path="res://Assets/Enviroment/Asteroids/PNGs/Asteroid_3.png" id="4_auuhx"]
+[ext_resource type="Texture2D" uid="uid://d041ayul2r6sd" path="res://Assets/Enviroment/Asteroids/PNGs/Asteroid_4.png" id="5_615uo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ccrg"]
+radius = 22.0227
+
+[node name="Asteroid" type="Area2D"]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource("1_psxlo")
+
+[node name="AsteroidImage" type="Sprite2D" parent="."]
+position = Vector2(0.999999, -1)
+scale = Vector2(1.24219, 1.24219)
+texture = ExtResource("2_2ry83")
+
+[node name="Sprite2D" type="Sprite2D" parent="AsteroidImage"]
+visible = false
+position = Vector2(-0.805029, 0.80503)
+scale = Vector2(0.80503, 0.80503)
+texture = ExtResource("5_615uo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="AsteroidImage"]
+visible = false
+position = Vector2(-0.805029, 0.80503)
+scale = Vector2(0.80503, 0.80503)
+texture = ExtResource("3_tc04s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="AsteroidImage"]
+visible = false
+position = Vector2(-0.805029, 0.80503)
+scale = Vector2(0.80503, 0.80503)
+texture = ExtResource("4_auuhx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_1ccrg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.069
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
