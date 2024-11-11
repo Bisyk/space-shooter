@@ -1,6 +1,7 @@
 # Space Shooter
 
-![Clipchamp-ezgif com-optimize](https://github.com/user-attachments/assets/338a36fd-014c-40d2-9b45-083398138a50)
+![image](https://github.com/user-attachments/assets/8516e214-2817-4514-9d37-1772be2c271b)
+![image](https://github.com/user-attachments/assets/33aac4fa-76d0-439e-b8d9-e9028b7669d4)
 
 Platforms: PC  <br> 
 ## Game description: 
