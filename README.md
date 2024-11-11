@@ -1,6 +1,6 @@
 # Space Shooter
 
-![Відео без назви — зроблено у Clipchamp](https://github.com/user-attachments/assets/50aa4281-369b-4efc-afe1-34176875f0c5)
+![Clipchamp-ezgif com-optimize](https://github.com/user-attachments/assets/338a36fd-014c-40d2-9b45-083398138a50)
 
 Platforms: PC  <br> 
 ## Game description: 
